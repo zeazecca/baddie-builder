@@ -1,0 +1,154 @@
+html {
+    box-sizing: border-box;
+    font-size: 2.4vw;
+}
+
+/* grid layout */
+
+#calc_zone {
+    display: grid;
+    grid-template-columns: auto auto;
+    grid-template-rows: auto auto auto auto auto auto;
+    grid-template-areas:
+        "quip_level buttons_level"
+        ". entry_level"
+        "quip_def buttons_def"
+        ". disp_def"
+        "quip_off buttons_off"
+        ". disp_off";
+    gap: 1rem 0;
+}
+
+#calc_zone > #quip_level {
+    grid-area: quip_level;
+}
+
+#calc_zone > #quip_def {
+    grid-area: quip_def;
+}
+
+#calc_zone > #quip_off {
+    grid-area: quip_off;
+}
+
+#calc_zone > #focus_box_level {
+    grid-area: buttons_level;
+}
+
+#calc_zone > #focus_box_def {
+    grid-area: buttons_def;
+}
+
+#calc_zone > #focus_box_off {
+    grid-area: buttons_off;
+}
+
+#calc_zone > #entry_level {
+    grid-area: entry_level;
+}
+
+#calc_zone > #disp_def {
+    grid-area: disp_def;
+}
+
+#calc_zone > #disp_off {
+    grid-area: disp_off;
+}
+
+@media all and (min-width: 1000px) {
+    html { font-size: 24px; }
+    #calc_zone {
+        grid-template-columns: auto auto auto;
+        grid-template-rows: auto auto auto;
+        grid-template-areas:
+            "quip_level buttons_level entry_level"
+            "quip_def buttons_def disp_def"
+            "quip_off buttons_off disp_off";
+    }
+}
+@media all and (max-width: 520px) {
+    html{ font-size: 18px; }
+    #calc_zone {
+        grid-template-columns: auto;
+        grid-template-rows: auto auto auto auto auto auto auto auto auto;
+        grid-template-areas:
+            "quip_level"
+            "buttons_level"
+            "entry_level"
+            "quip_def"
+            "buttons_def"
+            "disp_def"
+            "quip_off"
+            "buttons_off"
+            "disp_off";
+    }
+}
+
+/* TODO remove */
+/* div {
+    border: 1px solid salmon;
+}
+span {
+    border: 1px solid dodgerblue;
+} */
+
+/* styling */
+
+#calc_zone > .quip {
+    height: 3rem;
+}
+
+#calc_zone > .disp {
+    display: flex;
+}
+
+#calc_zone > .disp > .labeled_val {
+    display: grid;
+    margin: 0 0.5rem;
+    grid-template-columns: auto;
+    grid-template-rows: auto auto;
+}
+
+#calc_zone > .disp > .labeled_val > .label {
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: bolder;
+}
+
+/*
+    radio buttons, and everything
+    tangentially related
+*/
+
+@keyframes button_hover_fade_in {
+    to { opacity: 100%; }
+}
+
+@keyframes button_check_fade_in {
+    to { opacity: 100%; background-color: pink; border-radius: 1rem; }
+}
+
+.radio > .radio_input > .radio_control {
+    display: inline-block;
+    opacity: 50%;
+    border-radius: 2rem;
+}
+
+.radio > .radio_input > .radio_control > img {
+    width: 3rem;
+}
+
+.radio > .radio_input > input:hover + .radio_control {
+    animation: button_hover_fade_in 200ms;
+    animation-fill-mode: forwards;
+}
+
+.radio > .radio_input > input:checked + .radio_control {
+    animation: button_check_fade_in 200ms;
+    animation-fill-mode: forwards;
+}
+
+.radio > .radio_input > input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
