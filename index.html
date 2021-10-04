@@ -10,110 +10,116 @@
 </head>
 
 <body>
-    <div id="calc_zone">
-        <img class="quip" id="quip_level" src="Quip Level.png">
+    <div id="calculator">
+        <div class="calc_zone">
+            <img class="quip" id="quip_level" src="Quip Level.png">
 
-        <span id="focus_box_level">
-            <label class="radio">
-                <span class="radio_input">
-                    <input type="radio" name="stat_focus" id="focus_off" onchange="update()">
-                    <span class="radio_control"><img src="Icon Axe.png"></span>
-                </span>
-            </label>
+            <span class="focus_box">
+                <label class="radio">
+                    <span class="radio_input">
+                        <input type="radio" name="stat_focus" id="focus_off" onchange="update()">
+                        <span class="radio_control"><img src="Icon Axe.png"></span>
+                    </span>
+                </label>
 
-            <label class="radio">
-                <span class="radio_input">
-                    <input type="radio" name="stat_focus" id="focus_mid" checked="y" onchange="update()">
-                    <span class="radio_control"><img src="Icon Scales.png"></span>
-                </span>
-            </label>
+                <label class="radio">
+                    <span class="radio_input">
+                        <input type="radio" name="stat_focus" id="focus_mid" checked="y" onchange="update()">
+                        <span class="radio_control"><img src="Icon Scales.png"></span>
+                    </span>
+                </label>
 
-            <label class="radio">
-                <span class="radio_input">
-                    <input type="radio" name="stat_focus" id="focus_def" onchange="update()">
-                    <span class="radio_control"><img src="Icon Shield.png"></span>
-                </span>
-            </label>
-        </span>
-
-        <span id="entry_level" class="entry">
-            <label for="level_input">Level</label>
-            <input id="level_input" type="number" value=1 min=-3 max=30 step=1 onchange="update()">
-        </span>
-
-        <img class="quip" id="quip_def" src="Quip Bulk.png">
-
-        <span id="focus_box_def">
-            <label class="radio">
-                <span class="radio_input">
-                    <input type="radio" name="def_focus" id="focus_hp" onchange="update()">
-                    <span class="radio_control"><img src="Icon Fist.png"></span>
-                </span>
-            </label>
-
-            <label class="radio">
-                <span class="radio_input">
-                    <input type="radio" name="def_focus" id="focus_mid" checked="y" onchange="update()">
-                    <span class="radio_control"><img src="Icon Scales.png"></span>
-                </span>
-            </label>
-
-            <label class="radio">
-                <span class="radio_input">
-                    <input type="radio" name="def_focus" id="focus_ac" onchange="update()">
-                    <span class="radio_control"><img src="Icon Shield.png"></span>
-                </span>
-            </label>
-        </span>
-
-        <span class="disp">
-            <span class="labeled_val">
-                <label class="label" id="label_hp">Hit points</label>
-                <label class="value" id="hp_disp">HP</label>
+                <label class="radio">
+                    <span class="radio_input">
+                        <input type="radio" name="stat_focus" id="focus_def" onchange="update()">
+                        <span class="radio_control"><img src="Icon Shield.png"></span>
+                    </span>
+                </label>
             </span>
 
-            <span class="labeled_val">
-                <label class="label" id="label_ac">Armor class</label>
-                <label class="value" id="ac_disp">AC</label>
+            <span id="entry_level">
+                <label for="level_input" id=>Level</label>
+                <input id="level_input" type="number" value=1 min=-3 max=30 step=1 onchange="update()">
             </span>
-        </span>
+        </div>
 
-        <img class="quip" id="quip_off" src="Quip Brunt.png">
+        <div class="calc_zone">
+            <img class="quip" id="quip_def" src="Quip Bulk.png">
 
-        <span id="focus_box_off">
-            <label class="radio">
-                <span class="radio_input">
-                    <input type="radio" name="off_focus" id="focus_dmg" onchange="update()">
-                    <span class="radio_control"><img src="Icon Axe.png"></span>
-                </span>
-            </label>
+            <span class="focus_box">
+                <label class="radio">
+                    <span class="radio_input">
+                        <input type="radio" name="def_focus" id="focus_hp" onchange="update()">
+                        <span class="radio_control"><img src="Icon Fist.png"></span>
+                    </span>
+                </label>
 
-            <label class="radio">
-                <span class="radio_input">
-                    <input type="radio" name="off_focus" id="focus_mid" checked="y" onchange="update()">
-                    <span class="radio_control"><img src="Icon Scales.png"></span>
-                </span>
-            </label>
+                <label class="radio">
+                    <span class="radio_input">
+                        <input type="radio" name="def_focus" id="focus_mid" checked="y" onchange="update()">
+                        <span class="radio_control"><img src="Icon Scales.png"></span>
+                    </span>
+                </label>
 
-            <label class="radio">
-                <span class="radio_input">
-                    <input type="radio" name="off_focus" id="focus_hit" onchange="update()">
-                    <span class="radio_control"><img src="Icon Daggers.png"></span>
-                </span>
-            </label>
-        </span>
-
-        <span class="disp">
-            <span class="labeled_val">
-                <label class="label" id="label_dmg">Damage/round</label>
-                <label class="value" id="dmg_disp">DMG</label>
+                <label class="radio">
+                    <span class="radio_input">
+                        <input type="radio" name="def_focus" id="focus_ac" onchange="update()">
+                        <span class="radio_control"><img src="Icon Shield.png"></span>
+                    </span>
+                </label>
             </span>
 
-            <span class="labeled_val">
-                <label class="label" id="label_hit">Attack bonus</label>
-                <label class="value" id="hit_disp">HIT</label>
+            <span class="disp">
+                <span class="labeled_val">
+                    <label class="label" id="label_hp">Hit points</label>
+                    <label class="value" id="hp_disp">HP</label>
+                </span>
+
+                <span class="labeled_val">
+                    <label class="label" id="label_ac">Armor class</label>
+                    <label class="value" id="ac_disp">AC</label>
+                </span>
             </span>
-        </span>
+        </div>
+
+        <div class="calc_zone">
+            <img class="quip" id="quip_off" src="Quip Brunt.png">
+
+            <span class="focus_box">
+                <label class="radio">
+                    <span class="radio_input">
+                        <input type="radio" name="off_focus" id="focus_dmg" onchange="update()">
+                        <span class="radio_control"><img src="Icon Axe.png"></span>
+                    </span>
+                </label>
+
+                <label class="radio">
+                    <span class="radio_input">
+                        <input type="radio" name="off_focus" id="focus_mid" checked="y" onchange="update()">
+                        <span class="radio_control"><img src="Icon Scales.png"></span>
+                    </span>
+                </label>
+
+                <label class="radio">
+                    <span class="radio_input">
+                        <input type="radio" name="off_focus" id="focus_hit" onchange="update()">
+                        <span class="radio_control"><img src="Icon Daggers.png"></span>
+                    </span>
+                </label>
+            </span>
+
+            <span class="disp">
+                <span class="labeled_val">
+                    <label class="label" id="label_dmg">Damage/round</label>
+                    <label class="value" id="dmg_disp">DMG</label>
+                </span>
+
+                <span class="labeled_val">
+                    <label class="label" id="label_hit">Attack bonus</label>
+                    <label class="value" id="hit_disp">HIT</label>
+                </span>
+            </span>
+        </div>
     </div>
 
     <div id="sys_switch">
