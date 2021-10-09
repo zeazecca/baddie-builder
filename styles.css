@@ -7,6 +7,7 @@ html {
 
 #calculator {
     margin: 1rem;
+    width: 80vw;
 }
 
 #calculator > .calc_zone {
@@ -27,32 +28,53 @@ html {
 
 #calculator > .calc_zone > .focus_box {
     display: inline-block;
+    padding: 0 1rem 0 0;
 }
 
 #calculator > .calc_zone > .disp {
     display: inline-block;
     height: 3rem;
-    padding: 0 0 0 1.5rem;
 }
 
 #calculator > .calc_zone > #entry_level {
     display: inline-block;
-    width: 12rem;
-    height: 3rem;
-    padding: 0 0 0 1.5rem;
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: Helvetica, Arial, sans-serif;
+    position: relative;
+    top: -0.4rem;
 }
 
 #calculator > .calc_zone > #entry_level > label {
     display: block;
-    padding: 0 0 0.5rem 0;
     font-weight: bolder;
 }
+
+#calculator > .calc_zone > #entry_level > input {
+    display: block;
+    height: 1.5rem;
+    font-family: Helvetica, Arial, sans-serif;
+    font-size: 1rem;
+    outline: none;
+    border-radius: 0.5rem;
+    border-style: solid;
+}
+
+#calculator > .calc_zone > #entry_level > input:invalid {
+    border: 0.1rem solid tomato;
+}
+
+#calculator > .calc_zone > #entry_level > input {
+    appearance: textfield;
+}
+
+#calculator > .calc_zone > #entry_level > input::-webkit-outer-spin-button, input::-webkit-inner-spin-button {
+    appearance: none;
+}
+
 
 #calculator > .calc_zone > .disp > .labeled_val {
     display: inline-block;
     width: 12rem;
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: Helvetica, Arial, sans-serif;
 }
 
 #calculator > .calc_zone > .disp > .labeled_val > .label {
@@ -67,6 +89,23 @@ html {
 
 @media all and (max-width: 520px) {
     html { font-size: 18px; }
+    #calculator > .calc_zone > #entry_level,
+    #calculator > .calc_zone > .disp > .labeled_val {
+        padding: 1.5rem 0 0 0;
+    }
+    #calculator > .calc_zone > .disp > .labeled_val + .labeled_val {
+        padding: 0.5rem 0 0 0;
+    }
+    #calculator > .calc_zone > #entry_level > label,
+    #calculator > .calc_zone > #entry_level > input,
+    #calculator > .calc_zone > .disp > .labeled_val > .label {
+        display: inline;
+    }
+}
+
+#sys_switch {
+    display: block;
+    float: right;
 }
 
 /*

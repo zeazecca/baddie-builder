@@ -12,43 +12,43 @@
 <body>
     <div id="calculator">
         <div class="calc_zone">
-            <img class="quip" id="quip_level" src="Quip Level.png">
+            <img class="quip" id="quip_level" src="Quip Level.png" title="Break down your primary abilities.">
 
             <span class="focus_box">
                 <label class="radio">
-                    <span class="radio_input">
+                    <span class="radio_input" title="Boost bruising, lose bulk.">
                         <input type="radio" name="stat_focus" id="focus_off" onchange="update()">
                         <span class="radio_control"><img src="Icon Axe.png"></span>
                     </span>
                 </label>
 
                 <label class="radio">
-                    <span class="radio_input">
+                    <span class="radio_input" title="Balance bulk and bruising.">
                         <input type="radio" name="stat_focus" id="focus_mid" checked="y" onchange="update()">
                         <span class="radio_control"><img src="Icon Scales.png"></span>
                     </span>
                 </label>
 
                 <label class="radio">
-                    <span class="radio_input">
+                    <span class="radio_input" title="Boost bulk, lose bruising.">
                         <input type="radio" name="stat_focus" id="focus_def" onchange="update()">
                         <span class="radio_control"><img src="Icon Shield.png"></span>
                     </span>
                 </label>
             </span>
 
-            <span id="entry_level">
+            <div id="entry_level">
                 <label for="level_input" id=>Level</label>
-                <input id="level_input" type="number" value=1 min=-3 max=30 step=1 onchange="update()">
-            </span>
+                <input id="level_input" type="number" value=1 min=-3 max=30 step=1 onchange="update()" placeholder="Between -3 and 30...">
+            </div>
         </div>
 
         <div class="calc_zone">
-            <img class="quip" id="quip_def" src="Quip Bulk.png">
+            <img class="quip" id="quip_def" src="Quip Bulk.png" title="How's your backbone?">
 
             <span class="focus_box">
                 <label class="radio">
-                    <span class="radio_input">
+                    <span class="radio_input" title="Easy to hit, but beefy.">
                         <input type="radio" name="def_focus" id="focus_hp" onchange="update()">
                         <span class="radio_control"><img src="Icon Fist.png"></span>
                     </span>
@@ -56,13 +56,13 @@
 
                 <label class="radio">
                     <span class="radio_input">
-                        <input type="radio" name="def_focus" id="focus_mid" checked="y" onchange="update()">
+                        <input type="radio" name="def_focus" id="focus_mid" checked="y" onchange="update()" title="I like both.">
                         <span class="radio_control"><img src="Icon Scales.png"></span>
                     </span>
                 </label>
 
                 <label class="radio">
-                    <span class="radio_input">
+                    <span class="radio_input" title="I block like the best.">
                         <input type="radio" name="def_focus" id="focus_ac" onchange="update()">
                         <span class="radio_control"><img src="Icon Shield.png"></span>
                     </span>
@@ -83,25 +83,25 @@
         </div>
 
         <div class="calc_zone">
-            <img class="quip" id="quip_off" src="Quip Brunt.png">
+            <img class="quip" id="quip_off" src="Quip Brunt.png" title="How's your attack?">
 
             <span class="focus_box">
                 <label class="radio">
-                    <span class="radio_input">
+                    <span class="radio_input" title="When I hit, I bash 'em hard.">
                         <input type="radio" name="off_focus" id="focus_dmg" onchange="update()">
                         <span class="radio_control"><img src="Icon Axe.png"></span>
                     </span>
                 </label>
 
                 <label class="radio">
-                    <span class="radio_input">
+                    <span class="radio_input" title="I strike a balance.">
                         <input type="radio" name="off_focus" id="focus_mid" checked="y" onchange="update()">
                         <span class="radio_control"><img src="Icon Scales.png"></span>
                     </span>
                 </label>
 
                 <label class="radio">
-                    <span class="radio_input">
+                    <span class="radio_input" title="A steady barrage of cuts 'n jabs">
                         <input type="radio" name="off_focus" id="focus_hit" onchange="update()">
                         <span class="radio_control"><img src="Icon Daggers.png"></span>
                     </span>
@@ -111,19 +111,19 @@
             <span class="disp">
                 <span class="labeled_val">
                     <label class="label" id="label_dmg">Damage/round</label>
-                    <label class="value" id="dmg_disp">DMG</label>
+                    <label class="value" id="dmg_disp"></label>
                 </span>
 
                 <span class="labeled_val">
                     <label class="label" id="label_hit">Attack bonus</label>
-                    <label class="value" id="hit_disp">HIT</label>
+                    <label class="value" id="hit_disp"></label>
                 </span>
             </span>
         </div>
     </div>
 
     <div id="sys_switch">
-        <label class="radio">
+        <label class="radio" title="No major magic items, just like the book intended.">
             <span class="radio_input">
                 <input type="radio" name="sys_switch" id="sys_lomag" onchange="update()" checked="y">
                 <span class="radio_control"><img src="Icon Lowmagic.png"></span>
@@ -131,7 +131,7 @@
         </label>
 
         <label class="radio">
-            <span class="radio_input">
+            <span class="radio_input" title="Big magic items, make it flashy!">
                 <input type="radio" name="sys_switch" id="sys_himag" onchange="update()">
                 <span class="radio_control"><img src="Icon Highmagic.png"></span>
             </span>
