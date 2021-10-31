@@ -72,12 +72,12 @@
             <span class="disp">
                 <span class="labeled_val">
                     <label class="label" id="label_hp">Hit points</label>
-                    <label class="value" id="hp_disp">HP</label>
+                    <label class="value" id="hp_disp"></label> <!-- TODO default labels -->
                 </span>
 
                 <span class="labeled_val">
                     <label class="label" id="label_ac">Armor class</label>
-                    <label class="value" id="ac_disp">AC</label>
+                    <label class="value" id="ac_disp"></label> <!-- TODO default labels -->
                 </span>
             </span>
         </div>
@@ -111,12 +111,12 @@
             <span class="disp">
                 <span class="labeled_val">
                     <label class="label" id="label_dmg">Damage/round</label>
-                    <label class="value" id="dmg_disp"></label>
+                    <label class="value" id="dmg_disp"></label> <!-- TODO default labels -->
                 </span>
 
                 <span class="labeled_val">
                     <label class="label" id="label_hit">Attack bonus</label>
-                    <label class="value" id="hit_disp"></label>
+                    <label class="value" id="hit_disp"></label> <!-- TODO default labels -->
                 </span>
             </span>
         </div>
@@ -137,6 +137,97 @@
             </span>
         </label>
     </div>
+
+    <!-- Quick Markdown-generated example -->
+    <h1 id="pulling-a-fair-encounter-out-of-your-ass">Pulling a 'fair' encounter out of your ass</h1>
+    <p>Let's say you haven't got anything prepared, and you need an encounter to challenge your players. Some bandits in an
+        alleyway, let's say. How does the Baddie Builder help?</p>
+    <p>First, some encounter design. Here I'll assume 3 players, each at level 3. (So your Party Level is 3, too!) Let's say
+        we want the players outnumbered 2 to 1--so 6 bandits. Let's decide we want a Medium encounter, and check the XP
+        chart:</p>
+    <table>
+        <thead>
+            <tr>
+                <th style="text-align:center">Creature level</th>
+                <th style="text-align:right">Low-magic XP</th>
+                <th style="text-align:right">High-magic XP</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td style="text-align:center">PL+4</td>
+                <td style="text-align:right">240</td>
+                <td style="text-align:right">50</td>
+            </tr>
+            <tr>
+                <td style="text-align:center">PL+3</td>
+                <td style="text-align:right">160</td>
+                <td style="text-align:right">00</td>
+            </tr>
+            <tr>
+                <td style="text-align:center">PL+2</td>
+                <td style="text-align:right">120</td>
+                <td style="text-align:right">60</td>
+            </tr>
+            <tr>
+                <td style="text-align:center">PL+1</td>
+                <td style="text-align:right">100</td>
+                <td style="text-align:right">20</td>
+            </tr>
+            <tr>
+                <td style="text-align:center">PL+0</td>
+                <td style="text-align:right">80</td>
+                <td style="text-align:right">80</td>
+            </tr>
+            <tr>
+                <td style="text-align:center">PL-1</td>
+                <td style="text-align:right">60</td>
+                <td style="text-align:right">60</td>
+            </tr>
+            <tr>
+                <td style="text-align:center">PL-2</td>
+                <td style="text-align:right">50</td>
+                <td style="text-align:right">50</td>
+            </tr>
+            <tr>
+                <td style="text-align:center">PL-3</td>
+                <td style="text-align:right">40</td>
+                <td style="text-align:right">40</td>
+            </tr>
+            <tr>
+                <td style="text-align:center">PL-4</td>
+                <td style="text-align:right">30</td>
+                <td style="text-align:right">30</td>
+            </tr>
+        </tbody>
+    </table>
+    <p>By design, a Medium encounter pits one creature against each player. Their levels should be the same, or equivalent.
+        In the table above, a creature at the party's level rewards 80 XP in both systems. XP and strength are related: 4
+        guys worth 40 XP = 2 guys worth 80 = 1 guy worth 160. So since we have 2 bandits per player, each bandit should be
+        worth 40 XP -&gt; their level should be PL-3 = 3-3 = 0!</p>
+    <p>Put that number into the calculator and you'll get the following:</p>
+    <ul>
+        <li>Hit points: 19.5</li>
+        <li>Armor class: 14</li>
+        <li>Damage/round: 2.4</li>
+        <li>Attack bonus: 5</li>
+    </ul>
+    <p>Since these are lowlife thugs, let's go for offense under <strong>breakdown</strong> and choose damage over hit rate
+        under <strong>brunt</strong>:</p>
+    <ul>
+        <li>Hit points: 15.6</li>
+        <li>Armor class: 14</li>
+        <li>Damage/round: 3.6</li>
+        <li>Attack bonus: 3</li>
+    </ul>
+    <p>...which is more than enough to run an entire encounter! Let's turn this into a simple stat block:</p>
+    <blockquote>
+        <p>Bandit: <strong>HP</strong> 16, <strong>AC</strong> 14, <strong>Dagger</strong> +3/d4+1 (stab/throw),
+            <strong>Lv</strong> 0
+        </p>
+    </blockquote>
+    <p>Award XP as above: to a level 3 player, each bandit is worth 40 XP, so 240 XP total. Each player gets an equal share:
+        240/3=80 XP for each player. 1000 XP makes for a level.</p>
 
     <script src="./calc.js"></script>
 </body>
