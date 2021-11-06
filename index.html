@@ -39,7 +39,8 @@
 
             <div id="entry_level">
                 <label for="level_input" id=>Level</label>
-                <input id="level_input" type="number" value=1 min=-3 max=30 step=1 onchange="update()" placeholder="Between -3 and 30...">
+                <input id="level_input" type="number" value=1 min=-3 max=30 step=1 onchange="update()"
+                    placeholder="Between -3 and 30...">
             </div>
         </div>
 
@@ -140,9 +141,11 @@
 
     <!-- Quick Markdown-generated example -->
     <h1 id="pulling-a-fair-encounter-out-of-your-ass">Pulling a 'fair' encounter out of your ass</h1>
-    <p>Let's say you haven't got anything prepared, and you need an encounter to challenge your players. Some bandits in an
+    <p>Let's say you haven't got anything prepared, and you need an encounter to challenge your players. Some bandits in
+        an
         alleyway, let's say. How does the Baddie Builder help?</p>
-    <p>First, some encounter design. Here I'll assume 3 players, each at level 3. (So your Party Level is 3, too!) Let's say
+    <p>First, some encounter design. Here I'll assume 3 players, each at level 3. (So your Party Level is 3, too!) Let's
+        say
         we want the players outnumbered 2 to 1--so 6 bandits. Let's decide we want a Medium encounter, and check the XP
         chart:</p>
     <table>
@@ -201,9 +204,12 @@
             </tr>
         </tbody>
     </table>
-    <p>By design, a Medium encounter pits one creature against each player. Their levels should be the same, or equivalent.
-        In the table above, a creature at the party's level rewards 80 XP in both systems. XP and strength are related: 4
-        guys worth 40 XP = 2 guys worth 80 = 1 guy worth 160. So since we have 2 bandits per player, each bandit should be
+    <p>By design, a Medium encounter pits one creature against each player. Their levels should be the same, or
+        equivalent.
+        In the table above, a creature at the party's level rewards 80 XP in both systems. XP and strength are related:
+        4
+        guys worth 40 XP = 2 guys worth 80 = 1 guy worth 160. So since we have 2 bandits per player, each bandit should
+        be
         worth 40 XP -&gt; their level should be PL-3 = 3-3 = 0!</p>
     <p>Put that number into the calculator and you'll get the following:</p>
     <ul>
@@ -212,7 +218,8 @@
         <li>Damage/round: 2.4</li>
         <li>Attack bonus: 5</li>
     </ul>
-    <p>Since these are lowlife thugs, let's go for offense under <strong>breakdown</strong> and choose damage over hit rate
+    <p>Since these are lowlife thugs, let's go for offense under <strong>breakdown</strong> and choose damage over hit
+        rate
         under <strong>brunt</strong>:</p>
     <ul>
         <li>Hit points: 15.6</li>
@@ -226,8 +233,46 @@
             <strong>Lv</strong> 0
         </p>
     </blockquote>
-    <p>Award XP as above: to a level 3 player, each bandit is worth 40 XP, so 240 XP total. Each player gets an equal share:
+    <p>Award XP as above: to a level 3 player, each bandit is worth 40 XP, so 240 XP total. Each player gets an equal
+        share:
         240/3=80 XP for each player. 1000 XP makes for a level.</p>
+    <h1 id="pulling-a-fair-encounter-out-of-your-ass">Pulling a 'fair' encounter out of your ass</h1>
+    <h1>FAQ: how do I make my players roll saving throws?</h1>
+    <p>Sure, maybe your bandits need to grapple someone, or maybe they're pious and like to attack people with *sacred
+        flame*. That's easy enough: add 8 to their attack bonus and you've got their save DC.</p>
+    <blockquote>
+        <p>**Bandit**: **HP** 17, **AC** 14, ***Sacred flame*** DC 11/d8 (60' range), **Lv** 1</p>
+    </blockquote>
+    <h1>FAQ: how do my bandits save against attacks?</h1>
+    <li>
+        <p>*The lazy method*: subtract 14 from your AC; that's your saving throw bonus (14-14 = +0). For every ability
+            score.</p>
+    </li>
+    <li>
+        <p>*The other method*: do the same thing as above, then adjust your creature's AC and saving throws at a ratio of
+            1:3. So
+            if you want a Dex, Con, and Wis save bonus of +1, subtract 1 from your AC. If you want an AC that is 2 points
+            higher
+            than indicated by the Builder, subtract 6 points total from your Dex, Con, and Wis save bonuses. Weak saves
+            (Str, Int,
+            Cha) count for double, so always modify them in steps of two points.</p>
+    </li>
+    <blockquote>
+        <p>**Bandit**: **HP** 16, **AC** 14, **Dex** +1, **Con** +0, **Wis** -1, **Dagger** +3/d4+1 (stab/throw), **Lv** 0
+        </p>
+    </blockquote>
+    <blockquote>
+        <p>**Bandit**: **HP** 16, **AC** 13, **Dex** +1, **Con** +1, **Wis** +1, **Dagger** +3/d4+1 (stab/throw), **Lv** 0
+        </p>
+    </blockquote>
+    <blockquote>
+        <p>**Bandit**: **HP** 16, **AC** 15, **Dex** -1, **Con** -1, **Wis** -1, **Dagger** +3/d4+1 (stab/throw), **Lv** 0
+        </p>
+    </blockquote>
+    <blockquote>
+        <p>**Bandit**: **HP** 16, **AC** 13, **Str** +2, **Int** +2, **Cha** +2, **Dagger** +3/d4+1 (stab/throw), **Lv** 0
+        </p>
+    </blockquote>
 
     <script src="./calc.js"></script>
 </body>
